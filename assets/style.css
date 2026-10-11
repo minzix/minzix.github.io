@@ -197,54 +197,6 @@ code {
   .theme-toggle { margin-left: auto; }
 }
 
-/* ---------- Hero ---------- */
-.hero { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
-.eyebrow {
-  margin: 0 0 8px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-.hero h1 {
-  margin: 0;
-  font-size: clamp(36px, 7vw, 52px);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-.hero-meta {
-  list-style: none;
-  padding: 0;
-  margin: 14px 0 32px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 18px;
-  color: var(--text-muted);
-}
-.hero-meta li + li::before { content: "·"; margin-right: 18px; color: var(--text-faint); }
-
-.project-index { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-.project-index a {
-  display: grid;
-  grid-template-columns: 36px 1fr auto;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 16px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  text-decoration: none;
-  transition: border-color .15s, background .15s;
-}
-.project-index a:hover { border-color: var(--accent); background: var(--accent-soft); }
-.project-index .num { font-variant-numeric: tabular-nums; color: var(--text-faint); font-weight: 600; font-size: 14px; }
-.project-index .pname { font-weight: 600; }
-.project-index .ptag { color: var(--text-muted); font-size: 13px; white-space: nowrap; }
-@media (max-width: 520px) {
-  .project-index a { grid-template-columns: 28px 1fr; }
-  .project-index .ptag { grid-column: 2; white-space: normal; }
-}
-
 /* ---------- Sections ---------- */
 .section { padding-top: 56px; }
 .section-title {
@@ -298,20 +250,7 @@ code {
 .project li { margin: 4px 0; }
 .project li::marker { color: var(--text-faint); }
 
-.columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 24px;
-  margin: 6px 0 4px;
-}
-@media (max-width: 520px) { .columns { grid-template-columns: 1fr; } }
 
-blockquote {
-  margin: 28px 0 0;
-  padding: 4px 0 4px 16px;
-  border-left: 3px solid var(--text);
-  color: var(--text);
-}
 
 /* ---------- Problem-solving case ---------- */
 .case {

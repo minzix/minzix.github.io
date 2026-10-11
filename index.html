@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>김민지 포트폴리오</title>
-<meta name="description" content="김민지 — 백엔드·데이터 엔지니어링 포트폴리오. 광고 데이터 적재 파이프라인, 커머스 동기화 워커, ISMS-P 서버 보안 조치, Nexus API 명세 협업 플랫폼.">
+<meta name="description" content="김민지 — 백엔드·데이터 엔지니어링 포트폴리오. 광고 데이터 적재 파이프라인, 커머스 동기화 워커, Nexus API 명세 협업 플랫폼.">
 <meta property="og:title" content="김민지 포트폴리오">
 <meta property="og:description" content="백엔드·데이터 엔지니어링 프로젝트와 문제 해결 사례">
 <meta property="og:type" content="website">
@@ -41,8 +41,7 @@
         <ol>
           <li><a href="#p1">광고 데이터 적재 파이프라인</a></li>
           <li><a href="#p2">커머스 판매 데이터 동기화 워커</a></li>
-          <li><a href="#p3">ISMS-P 서버 보안 취약점 조치</a></li>
-          <li><a href="#p4">Nexus - API 명세 협업 플랫폼</a></li>
+          <li><a href="#p3">Nexus - API 명세 협업 플랫폼</a></li>
         </ol>
       </li>
       <li><a href="#experiences">Experiences</a></li>
@@ -51,21 +50,6 @@
   </aside>
 
 <main class="content">
-
-  <section class="hero">
-    <p class="eyebrow">Portfolio</p>
-    <h1>김민지</h1>
-    <ul class="hero-meta">
-      <li>숙명여자대학교 IT 공학전공</li>
-      <li>인크로스 플랫폼엔지니어링팀 인턴</li>
-    </ul>
-    <ul class="project-index">
-      <li><a href="#p1"><span class="num">01</span><span class="pname">광고 데이터 적재 파이프라인</span><span class="ptag">Spark · Iceberg</span></a></li>
-      <li><a href="#p2"><span class="num">02</span><span class="pname">커머스 판매 데이터 동기화 워커</span><span class="ptag">Node.js · MySQL</span></a></li>
-      <li><a href="#p3"><span class="num">03</span><span class="pname">ISMS-P 심사 대비 서버 보안 취약점 조치</span><span class="ptag">Linux · Bash</span></a></li>
-      <li><a href="#p4"><span class="num">04</span><span class="pname">Nexus - API 명세 협업 플랫폼</span><span class="ptag">Spring · RAG · MCP</span></a></li>
-    </ul>
-  </section>
 
   <section id="projects" class="section">
     <h2 class="section-title">Projects</h2>
@@ -164,7 +148,7 @@
         <h3>커머스 판매 데이터 동기화 워커 <span class="org">(인크로스 인턴)</span></h3>
         <dl class="facts">
           <div><dt>개발 기간</dt><dd>2026.03 ~ 2026.06 (인크로스 플랫폼엔지니어링팀 인턴)</dd></div>
-          <div><dt>참여 형태</dt><dd>단독 개발 및 운영</dd></div>
+          <div><dt>참여 형태</dt><dd>개발 및 운영</dd></div>
         </dl>
         <ul class="stack">
           <li>Node.js</li><li>axios</li><li>MySQL</li><li>PM2</li>
@@ -223,86 +207,6 @@
     <article id="p3" class="project">
       <header class="project-head">
         <p class="project-num">프로젝트 3</p>
-        <h3>ISMS-P 심사 대비 서버 보안 취약점 조치 <span class="org">(인크로스 인턴)</span></h3>
-        <dl class="facts">
-          <div><dt>업무 기간</dt><dd>2026.04 ~ 2026.05 (인크로스 플랫폼엔지니어링팀 인턴)</dd></div>
-          <div><dt>참여 형태</dt><dd>인프라 담당자 1명 보조 (상용 적용 승인은 담당자)</dd></div>
-        </dl>
-        <ul class="stack">
-          <li>Linux(Ubuntu)</li><li>Bash</li><li>OpenSSH</li><li>PAM</li>
-        </ul>
-      </header>
-
-      <h4>업무 내용</h4>
-      <ul>
-        <li>ISMS-P 인증 범위 확대에 따라 서버 300여 대의 보안 취약점 7개 항목을 2개월 안에 조치하는 인프라 업무 보조</li>
-        <li>조치 항목(KISA 2025년 「주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세가이드」 기준)
-          <div class="columns">
-            <ul>
-              <li>root 원격 접속 제한(U-01)</li>
-              <li>su 사용 제한(U-06)</li>
-              <li>불필요한 계정 제거(U-07)</li>
-              <li>세션 타임아웃(U-12)</li>
-            </ul>
-            <ul>
-              <li>파일·디렉터리 소유자(U-15)</li>
-              <li>syslog 설정 파일 권한(U-21)</li>
-              <li>홈 디렉터리 소유자 및 권한(U-31)</li>
-            </ul>
-          </div>
-        </li>
-        <li>결과: 서버 300여 대 조치를 기한 안에 마쳤고, 상용 장애나 롤백은 0건이었습니다.</li>
-      </ul>
-
-      <h4>배경 및 목표</h4>
-      <ul>
-        <li>상용 서버가 다수 포함돼, 조치 실패가 곧 서비스 장애로 이어질 수 있었습니다.</li>
-        <li>목표를 기준 충족에서 서비스를 깨뜨리지 않으면서 기준 충족으로 한 단계 높게 잡았습니다.</li>
-      </ul>
-
-      <h4>담당 역할</h4>
-      <ul>
-        <li><strong>조치 가이드 작성:</strong> 항목별 진단 기준, 점검, 백업, 조치, 확인, 원복, 서비스 영향도 정리</li>
-        <li><strong>판단 기준표:</strong> su 사용 제한처럼 조건이 여러 개인 항목은 양호와 조치 필요를 가르는 기준표로 정리</li>
-        <li><strong>조치 스크립트:</strong> 사전 영향도 조회만 수행하는 dry-run을 기본값으로 하고, 원복 스크립트는 조치 전에 먼저 작성해 개발 서버에서 왕복 테스트</li>
-        <li><strong>단계적 적용:</strong> 모든 조치를 개발 서버에서 먼저 검증한 뒤 스테이징, 상용 서버 순서로 적용</li>
-      </ul>
-
-      <blockquote>업무를 처음 받았을 때 시간을 단축하고 안전하게 작업하기 위해 조치 스크립트와 복구 스크립트를 미리 작성해 표준화했습니다.</blockquote>
-
-      <section class="case">
-        <h4><span class="case-no">문제 해결 ①</span> root 원격 접속 제한의 숨은 의존성 (U-01)</h4>
-        <dl class="steps">
-          <dt>문제</dt><dd>설정 하나만 바꾸면 되는 항목처럼 보였지만, 현재 기본값 prohibit-password는 키 기반 root 접속을 허용하고 있었습니다. Jenkins나 배포 스크립트 같은 자동화가 키로 root에 접속하고 있다면 조치하는 순간 자동화가 멈출 수 있었습니다.</dd>
-          <dt>해결 방법</dt><dd>authorized_keys 등록 여부와 auth.log의 root 공개키 접속 기록을 교차 확인했습니다. 기록이 없는 서버에는 바로 PermitRootLogin no를 적용했습니다. 기록이 있는 서버는 접속 IP로 접속 주체를 확인해, 인프라팀에 일반 계정과 sudo로 전환해 달라고 요청한 뒤 조치했습니다. sshd_config는 시각을 붙여 백업했고, 기존 세션을 유지한 채 새 터미널에서 접속을 테스트했습니다.</dd>
-          <dt>결과</dt><dd>조치 후 SSH 접속, sudo, 자동화 작업에서 장애는 없었습니다.</dd>
-        </dl>
-      </section>
-
-      <section class="case">
-        <h4><span class="case-no">문제 해결 ②</span> 세션 타임아웃 적용 시 전체 로그인 장애 위험 (U-12)</h4>
-        <dl class="steps">
-          <dt>문제</dt><dd>/etc/profile.d에 TMOUT을 설정하면 그 서버에 로그인하는 모든 사용자에게 적용돼, 문법 오류 하나로 이후 모든 로그인의 셸 초기화가 실패할 수 있었습니다. 모니터링 계정은 세션이 끊기면 업무를 할 수 없었습니다.</dd>
-          <dt>해결 방법</dt><dd>다른 터미널에 세션을 유지한 채로 작업하고 새 터미널에서 로그인을 테스트했습니다. /etc/profile에 남아 있던 기존 TMOUT=900을 정리해 설정을 한 파일로 모았고, 모니터링 계정은 사용자별 분기로 예외 처리했으며 모니터링이 거쳐 가는 경유 서버에도 같은 예외를 적용했습니다.</dd>
-          <dt>결과</dt><dd>모니터링 계정을 예외로 둔 채 전 서버에 10분 타임아웃을 적용했고, 로그인 장애 없이 마쳤습니다.</dd>
-        </dl>
-      </section>
-
-      <section class="case">
-        <h4><span class="case-no">문제 해결 ③</span> 권한·소유자 변경이 끊을 수 있는 의존성 (U-31, U-21, U-07)</h4>
-        <dl class="steps">
-          <dt>문제</dt><dd>chown, chmod, userdel은 실행 즉시 반영돼, 되돌리기 전까지 장애가 이어집니다.</dd>
-          <dt>원인 분석</dt><dd>홈 디렉터리 소유자를 root에서 본인 계정으로 바꾸면 root로 실행되던 cron이 쓰기에 실패할 수 있었고, 서비스 계정이 의도적으로 다른 계정의 디렉터리를 소유한 경우도 있었습니다. syslog 설정 파일 권한을 640으로 줄이면 root 그룹이 아닌 로그 수집 에이전트가 파일을 읽지 못할 수 있었고, 기본 계정을 삭제하면 소유자 없는 파일이 남아 U-15와 같은 취약점이 다시 생겼습니다.</dd>
-          <dt>해결 방법</dt><dd>변경 전에 fuser로 파일을 열고 있는 프로세스를, grep으로 해당 파일을 참조하는 스크립트를, ps와 systemctl로 삭제 대상 계정의 실행 프로세스를 확인했습니다. fuser는 실행 순간만 감지하고 인라인 crontab은 grep에 잡히지 않는다는 사각지대도 문서에 남겼고, 삭제는 백업 후 절대 경로로 수행했습니다.</dd>
-          <dt>결과</dt><dd>사전 확인으로 의존하는 프로세스가 없음을 확인한 뒤 조치했고, 로그 수집 누락이나 서비스 장애는 없었습니다.</dd>
-        </dl>
-      </section>
-    </article>
-
-    <!-- ===================== 프로젝트 4 ===================== -->
-    <article id="p4" class="project">
-      <header class="project-head">
-        <p class="project-num">프로젝트 4</p>
         <h3>Nexus - API 명세 협업 플랫폼</h3>
         <dl class="facts">
           <div><dt>개발 기간</dt><dd>2026.01 ~ 2026.06 (숙명여자대학교 졸업프로젝트)</dd></div>
