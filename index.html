@@ -261,15 +261,15 @@
           <dt>해결 방법</dt><dd>질문, 검색된 컨텍스트, 생성 답변을 별도 <code>judgeClient</code>에 전달하는 LLM-as-a-Judge 평가를 구현했습니다. 검색 품질은 컨텍스트가 질문에 필요한 정보를 포함하고 있는지, 검색된 청크가 답변에 유용한지를 기준으로 평가하고, 생성 품질은 답변이 검색 근거를 충실하게 사용하는지, 질문에 적절히 답하는지, 환각이나 모순이 있는지, 응답 지시를 준수하는지를 기준으로 평가했습니다. 총 7개 지표를 평가 기준과 함께 정의하고 JSON으로 반환받았으며, <code>temperature=0.0</code>으로 변동을 줄였습니다.
             <div class="table-wrap">
               <table class="metrics">
-                <thead><tr><th scope="col">지표</th><th scope="col">의미</th></tr></thead>
+                <thead><tr><th scope="col">구분</th><th scope="col">지표</th><th scope="col">의미</th></tr></thead>
                 <tbody>
-                  <tr class="row-retrieval"><th scope="row">검색 정보 충분성</th><td>질문에 답하는 데 필요한 정보가 검색 결과에 얼마나 충분히 포함됐는지</td></tr>
-                  <tr class="row-retrieval"><th scope="row">검색 정보 적합성</th><td>검색된 정보가 질문과 답변에 얼마나 관련 있고 유용한지</td></tr>
-                  <tr class="row-generation"><th scope="row">검색 정보 충실도</th><td>답변이 검색 정보에 의해 얼마나 충실하게 뒷받침되는지</td></tr>
-                  <tr class="row-generation"><th scope="row">질문 답변 관련성</th><td>답변이 사용자 질문의 의도와 핵심에 얼마나 직접적으로 대응하는지</td></tr>
-                  <tr class="row-generation"><th scope="row">시스템 지시 준수도</th><td>한국어 응답, 원문 인용 등 지정한 응답 규칙을 얼마나 준수하는지</td></tr>
-                  <tr class="row-generation"><th scope="row">환각 정도</th><td>검색 정보에 없거나 검색 정보로 뒷받침되지 않는 내용이 포함된 정도</td></tr>
-                  <tr class="row-generation"><th scope="row">검색 정보 모순 여부</th><td>답변이 검색 정보와 명백하게 상충하는지 여부</td></tr>
+                  <tr><th scope="rowgroup" rowspan="2" class="group">검색 품질</th><th scope="row">검색 정보 충분성</th><td>질문에 답하는 데 필요한 정보가 검색 결과에 얼마나 충분히 포함됐는지</td></tr>
+                  <tr><th scope="row">검색 정보 적합성</th><td>검색된 정보가 질문과 답변에 얼마나 관련 있고 유용한지</td></tr>
+                  <tr><th scope="rowgroup" rowspan="5" class="group">생성 품질</th><th scope="row">검색 정보 충실도</th><td>답변이 검색 정보에 의해 얼마나 충실하게 뒷받침되는지</td></tr>
+                  <tr><th scope="row">질문 답변 관련성</th><td>답변이 사용자 질문의 의도와 핵심에 얼마나 직접적으로 대응하는지</td></tr>
+                  <tr><th scope="row">시스템 지시 준수도</th><td>한국어 응답, 원문 인용 등 지정한 응답 규칙을 얼마나 준수하는지</td></tr>
+                  <tr><th scope="row">환각 정도</th><td>검색 정보에 없거나 검색 정보로 뒷받침되지 않는 내용이 포함된 정도</td></tr>
+                  <tr><th scope="row">검색 정보 모순 여부</th><td>답변이 검색 정보와 명백하게 상충하는지 여부</td></tr>
                 </tbody>
               </table>
             </div>

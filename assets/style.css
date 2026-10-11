@@ -10,8 +10,6 @@
   --accent-soft: #eaf1fd;
   --code-bg: #f1f0ec;
   --code-text: #c4432b;
-  --row-yellow: #fbf3db;
-  --row-green: #edf3ec;
   --figure-bg: #ffffff;
   --topbar-h: 56px;
   color-scheme: light;
@@ -30,8 +28,6 @@
     --accent-soft: #1f2a3d;
     --code-bg: #2a2a28;
     --code-text: #f08a72;
-    --row-yellow: #3a321c;
-    --row-green: #1f2e22;
     --figure-bg: #fbfbfa;
     color-scheme: dark;
   }
@@ -48,8 +44,6 @@
   --accent-soft: #1f2a3d;
   --code-bg: #2a2a28;
   --code-text: #f08a72;
-  --row-yellow: #3a321c;
-  --row-green: #1f2e22;
   --figure-bg: #fbfbfa;
   color-scheme: dark;
 }
@@ -313,9 +307,8 @@ th, td {
   line-height: 1.55;
 }
 thead th { background: var(--bg-soft); font-weight: 600; color: var(--text-muted); }
-.metrics tbody th { white-space: nowrap; font-weight: 700; }
-.metrics .row-retrieval { background: var(--row-yellow); }
-.metrics .row-generation { background: var(--row-green); }
+.metrics tbody th { white-space: nowrap; font-weight: 400; }
+.metrics tbody th.group { vertical-align: middle; text-align: center; background: var(--bg-soft); color: var(--text-muted); font-weight: 600; }
 
 .retro li { margin: 6px 0; }
 
